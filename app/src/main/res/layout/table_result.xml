@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.sanstakip.model.ResultModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@{model.strMatchedNumbers()}"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            tools:text="6 Bilen Sayısı:"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{model.winnerCount}"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16dp"
+            tools:text="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/ikramiyeTutarTitle"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{model.strWinnerPrize()}"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16dp"
+            tools:text="104.037.737,16 ₺"/>
+
+    </LinearLayout>
+</layout>
